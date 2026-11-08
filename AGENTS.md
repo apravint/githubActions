@@ -1,38 +1,64 @@
-# AGENTS.md - Developer & AI Agent Guide for githubActions 🤖
+# AGENTS.md - Developer & AI Agent Operations Manual for `githubActions` 🤖
 
-## 🎯 Repository Overview
-**githubActions**: Core repository for githubActions.
+This document is the definitive operational guide for autonomous AI coding agents (Antigravity, Claude, Cursor, OpenAI Codex, OpenHands) operating within this repository.
 
 ---
 
-## 🏗️ Repository Architecture
-Key directories and entrypoints: `.github/, LICENSE, README.md, mvnw, mvnw.cmd, pom.xml, src/`.
+## 🎯 1. System Overview & Core Philosophy
 
-### Tech Stack & Runtime
-- **Language & Build:** Java / Maven (`pom.xml`, `./mvnw`)
+**githubActions**
+> Core repository for githubActions.
 
-## ⚙️ Executable Verification Commands
+---
 
-### 1. Compile & Execute Tests
+## 🏗️ 2. Repository Structure & Directory Map
+
+| Path | Role & Architectural Responsibility |
+| :--- | :--- |
+| `.github/` | Subsystem directory (.github) |
+| `src/` | Primary source package and modules |
+
+---
+
+## ⚙️ 3. Executable Verification Pipeline
+
+Before marking any task complete, an AI agent **must** run the following verification steps sequentially:
+
+### Tier 1: Compilation & Unit Test Suite
 ```bash
 ./mvnw clean test
 ```
 
 ---
 
-## 🛡️ Coding & Safety Guidelines for Autonomous Agents
+## 🛡️ 4. Architectural Invariants & Non-Negotiable Rules
 
-1. **Documentation Integrity:** Preserve all existing docstrings, header comments, and licensing banners. Never delete context unless specifically instructed.
-2. **Zero Hardcoded Secrets:** Never embed API keys, OAuth tokens, personal access tokens, or sensitive credentials in committed files. Read credentials exclusively from environment variables or secure credential paths.
-3. **Git Hygiene:**
-   - Do not force-push (`git push --force`) or execute destructive resets.
-   - Never modify root git configurations or harness infrastructure outside task scope.
-   - Keep git diffs atomic, focused, and verified before committing.
-4. **Agent Workflow Protocol:**
-   - **Plan:** Inspect codebase architecture and dependencies before editing.
-   - **Act:** Make minimal, clean, high-precision changes.
-   - **Verify:** Run the appropriate verification commands listed above.
-   - **Reflect:** Confirm zero regressions and review `git diff`.
+### Strict Invariants ("Never Do" List):
+1. **Documentation Integrity:** Preserve all existing comments, docstrings, and license headers. Never truncate context.
+2. **Clean Atomic Diffs:** Keep git commits minimal, focused, and verified.
+
+### Security & Environment Variables:
+- All API keys and secrets must be loaded strictly from environment variables.
+- Never commit `.env`, `.pem`, token files, or private credentials.
 
 ---
-*Maintained by Ayyappa Pravin • Built for Antigravity, Claude, Cursor & Autonomous AI Agents.*
+
+## 🤖 5. Autonomous Agent Operational Protocol
+
+When dispatched to resolve an issue, implement a feature, or refactor code in this repo:
+
+1. **Phase 1 — Explore & Plan:**
+   - Read this `AGENTS.md` and relevant source files.
+   - Check existing tests to establish the baseline.
+2. **Phase 2 — Act (Surgical Implementation):**
+   - Implement changes with minimal blast radius.
+   - Adhere to the established code style and existing conventions.
+3. **Phase 3 — Verify:**
+   - Run the Tier 1, 2, and 3 verification commands listed above.
+   - Ensure all existing and new tests pass cleanly.
+4. **Phase 4 — Reflect:**
+   - Review `git diff` to confirm zero unintended whitespace or collateral changes.
+   - Confirm no untracked scratch files remain.
+
+---
+*Maintained by Ayyappa Pravin • Engineered for Antigravity, Claude, Cursor & Modern Autonomous AI Agents.*
